@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verbattle — Duelo</title>
+  <meta name="theme-color" content="#0D0D14" />
+  <style>
+    :root {
+      --bg: #0D0D14;
+      --fg: #FFFFFF;
+      --muted: #9A9AB0;
+      --accent: #6C5CE7;
+      --card: #16161F;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px;
+      -webkit-font-smoothing: antialiased;
+    }
+    .card {
+      width: 100%;
+      max-width: 380px;
+      text-align: center;
+    }
+    .logo {
+      font-size: 40px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+    .logo .dot { color: var(--accent); }
+    .tagline {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 36px;
+    }
+    .target {
+      font-size: 44px;
+      margin-bottom: 28px;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 16px 20px;
+      border-radius: 14px;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 14px;
+      transition: transform 0.05s ease, opacity 0.2s ease;
+    }
+    .btn:active { transform: scale(0.98); }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-secondary {
+      background: var(--card);
+      color: var(--fg);
+      border: 1px solid #2A2A38;
+    }
+    .hint {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 22px;
+      line-height: 1.5;
+    }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="target">🎯</div>
+    <div class="logo">Verbattle<span class="dot">.</span></div>
+    <p class="tagline">¡Te han retado a un duelo de palabras!<br />Abre la app para responder.</p>
+
+    <a id="openBtn" class="btn btn-primary" href="#">Abrir Verbattle</a>
+    <a id="storeBtn" class="btn btn-secondary"
+       href="https://play.google.com/store/apps/details?id=com.seedlabs.verbattle">
+      Descargar en Play Store
+    </a>
+
+    <p id="noChallenge" class="hint hidden">
+      Este enlace no contiene un duelo válido. Descarga Verbattle para empezar a jugar.
+    </p>
+    <p id="hint" class="hint">
+      ¿No se abre? Asegúrate de tener Verbattle instalado.
+    </p>
+  </main>
+
+  <script>
+    // The duel payload travels in the URL fragment (#<body>.<signature>), which
+    // never reaches the server — only the browser sees it. We hand it to the app
+    // unchanged via the legacy custom scheme, which the app also accepts.
+    (function () {
+      var hash = window.location.hash || "";          // includes leading "#"
+      var payload = hash.startsWith("#") ? hash.slice(1) : hash;
+
+      var openBtn = document.getElementById("openBtn");
+      var hint = document.getElementById("hint");
+      var noChallenge = document.getElementById("noChallenge");
+
+      // A valid duel fragment looks like "<body>.<signature>".
+      var hasChallenge = payload.length > 0 && payload.indexOf(".") > 0;
+
+      if (!hasChallenge) {
+        // No payload: hide the open button, point the user at the store.
+        openBtn.classList.add("hidden");
+        hint.classList.add("hidden");
+        noChallenge.classList.remove("hidden");
+        return;
+      }
+
+      // Custom-scheme deep link carrying the same fragment.
+      var deepLink = "verbattle://duel#" + payload;
+      openBtn.setAttribute("href", deepLink);
+
+      function openApp() {
+        window.location.href = deepLink;
+      }
+
+      openBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        openApp();
+      });
+
+      // Try to bounce straight into the app on arrival.
+      openApp();
+    })();
+  </script>
+</body>
+</html>
