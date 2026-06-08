@@ -81,7 +81,7 @@
   <main class="card">
     <div class="target">🎯</div>
     <div class="logo">Verbattle<span class="dot">.</span></div>
-    <p class="tagline">¡Te han retado a un duelo de palabras!<br />Abre la app para responder.</p>
+    <p id="tagline" class="tagline">¡Te han retado a un duelo de palabras!<br />Abre la app para responder.</p>
 
     <a id="openBtn" class="btn btn-primary" href="#">Abrir Verbattle</a>
     <a id="storeBtn" class="btn btn-secondary"
@@ -108,6 +108,7 @@
       var openBtn = document.getElementById("openBtn");
       var hint = document.getElementById("hint");
       var noChallenge = document.getElementById("noChallenge");
+      var tagline = document.getElementById("tagline");
 
       // A valid duel fragment looks like "<body>.<signature>".
       var hasChallenge = payload.length > 0 && payload.indexOf(".") > 0;
@@ -118,6 +119,37 @@
         hint.classList.add("hidden");
         noChallenge.classList.remove("hidden");
         return;
+      }
+
+      // Personalize the tagline with the challenger's name. The name rides in
+      // the base64url-encoded body's "name" field; the fragment never reaches
+      // the server, so this is decoded entirely in the browser.
+      //
+      // SECURITY: the name is attacker-controlled — anyone can craft a duel link
+      // and this page does NOT verify the HMAC signature (only the app does). It
+      // is therefore inserted with textContent / DOM nodes, NEVER innerHTML, so a
+      // name like "<img src=x onerror=...>" can never inject HTML or run script.
+      try {
+        var body = payload.substring(0, payload.indexOf("."));
+        var b64 = body.replace(/-/g, "+").replace(/_/g, "/");
+        while (b64.length % 4) b64 += "=";
+        var json = decodeURIComponent(escape(atob(b64)));
+        var data = JSON.parse(json);
+        var name = (data && typeof data.name === "string") ? data.name.trim() : "";
+        if (!name) name = "Un jugador";
+
+        // Rebuild the tagline safely: <strong>NAME</strong> te retó…<br>Abre…
+        tagline.textContent = "";
+        var strong = document.createElement("strong");
+        strong.textContent = name; // textContent → the name is never parsed as HTML
+        tagline.appendChild(strong);
+        tagline.appendChild(
+          document.createTextNode(" te retó a un duelo de palabras!"));
+        tagline.appendChild(document.createElement("br"));
+        tagline.appendChild(
+          document.createTextNode("Abre la app para responder."));
+      } catch (e) {
+        // Keep the default tagline if the name can't be decoded.
       }
 
       // Custom-scheme deep link carrying the same fragment.
