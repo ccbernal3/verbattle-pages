@@ -85,7 +85,7 @@
     <!-- ============================ ESPAÑOL ============================ -->
     <section class="doc" data-lang="es">
       <h1>Política de Privacidad de Verbattle</h1>
-      <p class="updated">Última actualización: 8 de junio de 2026</p>
+      <p class="updated">Última actualización: 9 de junio de 2026</p>
 
       <p>
         Verbattle ("la aplicación", "nosotros") es un juego de palabras desarrollado
@@ -99,8 +99,7 @@
         <li>
           <strong>Datos almacenados en tu dispositivo:</strong> tu historial de
           partidas, racha, idioma, tema seleccionado y preferencias (modo difícil,
-          sonido). Esta información se guarda <em>localmente</em> en tu dispositivo y
-          no se envía a nuestros servidores.
+          sonido). Esta información se guarda <em>localmente</em> en tu dispositivo.
         </li>
         <li>
           <strong>Publicidad (AdMob):</strong> en la versión gratuita mostramos
@@ -116,29 +115,79 @@
         </li>
       </ul>
       <p>
-        Verbattle <strong>no</strong> solicita tu nombre, correo electrónico,
-        ubicación precisa, contactos ni acceso a la cámara o el micrófono.
+        Verbattle <strong>no</strong> requiere que crees una cuenta ni te pide tu correo
+        electrónico, número de teléfono, ubicación precisa, contactos ni acceso a la
+        cámara o el micrófono.
       </p>
 
-      <h2>2. Cómo usamos los datos</h2>
+      <h2>2. Datos en la nube y torneos</h2>
+      <p>
+        Algunas funciones, como los torneos y la tabla de posiciones global, requieren
+        enviar una cantidad mínima de datos a la nube. Queremos ser totalmente claros
+        sobre qué se envía y para qué:
+      </p>
+      <ul>
+        <li>
+          <strong>Autenticación anónima:</strong> la aplicación usa el inicio de sesión
+          anónimo de Firebase (Google). No necesitas registrarte ni proporcionar un
+          correo electrónico; simplemente se genera un identificador anónimo para tu
+          dispositivo.
+        </li>
+        <li>
+          <strong>Datos de torneos:</strong> cuando participas en un torneo, enviamos a
+          Firebase Firestore el nombre que elijas para mostrar, el número de intentos,
+          el tiempo y el resultado de tu partida. Estos datos son necesarios para
+          calcular y mostrar la tabla de posiciones global.
+        </li>
+        <li>
+          <strong>Sin datos personales identificables:</strong> no recopilamos datos que
+          te identifiquen personalmente, como correo electrónico, número de teléfono,
+          ubicación o contactos. El nombre del torneo es un alias que tú eliges y no
+          tiene por qué ser tu nombre real.
+        </li>
+        <li>
+          <strong>Identificador de publicidad:</strong> usamos el identificador de
+          publicidad de tu dispositivo para mostrar anuncios a través de Google AdMob
+          (consulta la sección de publicidad más abajo).
+        </li>
+        <li>
+          <strong>Cifrado en tránsito:</strong> todos los datos que se envían a la nube
+          viajan cifrados (HTTPS/TLS).
+        </li>
+        <li>
+          <strong>Eliminar tus datos:</strong> puedes borrar todos tus datos de la nube
+          en cualquier momento desde la opción <strong>"Eliminar mis datos"</strong> en
+          los Ajustes de la aplicación.
+        </li>
+      </ul>
+
+      <h2>3. Cómo usamos los datos</h2>
       <ul>
         <li>Para guardar tu progreso y preferencias en el dispositivo.</li>
+        <li>Para gestionar los torneos y mostrar la tabla de posiciones global (a través de Firebase).</li>
         <li>Para mostrar anuncios en la versión gratuita (a través de AdMob).</li>
         <li>Para gestionar la suscripción Verbattle Pro (a través de Google Play).</li>
       </ul>
 
-      <h2>3. No vendemos tus datos</h2>
+      <h2>4. No vendemos tus datos</h2>
       <div class="card">
         <p style="margin:0">
           <strong>No vendemos ni alquilamos tus datos personales a terceros.</strong>
-          Los únicos datos que salen del dispositivo son los que procesan Google AdMob
-          (publicidad) y Google Play (compras), conforme a sus propias políticas.
+          Los únicos datos que salen del dispositivo son los que necesitan los torneos
+          (a través de Firebase), la publicidad (Google AdMob) y las compras
+          (Google Play), conforme a sus propias políticas.
         </p>
       </div>
 
-      <h2>4. Terceros</h2>
+      <h2>5. Terceros</h2>
       <p>La aplicación utiliza los siguientes servicios de Google:</p>
       <ul>
+        <li>
+          <strong>Firebase (Authentication y Firestore)</strong> — para la autenticación
+          anónima y los torneos.
+          <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">
+            Privacidad de Firebase</a>.
+        </li>
         <li>
           <strong>Google AdMob</strong> —
           <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
@@ -150,37 +199,39 @@
         </li>
       </ul>
 
-      <h2>5. Anuncios personalizados</h2>
+      <h2>6. Anuncios personalizados</h2>
       <p>
         Puedes restablecer o limitar el identificador de publicidad desde los ajustes
         de tu dispositivo Android (<code>Ajustes → Google → Anuncios</code>). Al
         adquirir Verbattle Pro se eliminan todos los anuncios.
       </p>
 
-      <h2>6. Menores de edad</h2>
+      <h2>7. Menores de edad</h2>
       <p>
         Verbattle no está dirigido a menores de 13 años y no recopilamos
         conscientemente datos personales de menores.
       </p>
 
-      <h2>7. Tus derechos</h2>
+      <h2>8. Tus derechos</h2>
       <p>
-        Como los datos del juego se guardan localmente, puedes eliminarlos en
+        Los datos del juego se guardan localmente, así que puedes eliminarlos en
         cualquier momento desinstalando la aplicación o borrando sus datos desde los
-        ajustes del sistema.
+        ajustes del sistema. Además, puedes eliminar todos los datos asociados a los
+        torneos en la nube con la opción <strong>"Eliminar mis datos"</strong> dentro de
+        los Ajustes de la aplicación.
       </p>
 
-      <h2>8. Cambios en esta política</h2>
+      <h2>9. Cambios en esta política</h2>
       <p>
         Podemos actualizar esta política ocasionalmente. La fecha de "última
         actualización" en la parte superior reflejará cualquier cambio.
       </p>
 
-      <h2>9. Contacto</h2>
+      <h2>10. Contacto</h2>
       <p>
         Si tienes preguntas sobre esta política de privacidad, escríbenos a:
         <br />
-        <a href="mailto:seedlabsgames@gmail.com">seedlabsgames@gmail.com</a>
+        <a href="mailto:contacto@lubicalabs.com">contacto@lubicalabs.com</a>
       </p>
 
       <footer>
@@ -191,7 +242,7 @@
     <!-- ============================ ENGLISH ============================ -->
     <section class="doc" data-lang="en" hidden>
       <h1>Verbattle Privacy Policy</h1>
-      <p class="updated">Last updated: June 8, 2026</p>
+      <p class="updated">Last updated: June 9, 2026</p>
 
       <p>
         Verbattle ("the app", "we") is a word game developed by Lubica Labs. We
@@ -205,8 +256,7 @@
         <li>
           <strong>Data stored on your device:</strong> your game history, streak,
           language, selected theme and preferences (hard mode, sound). This
-          information is stored <em>locally</em> on your device and is not sent to our
-          servers.
+          information is stored <em>locally</em> on your device.
         </li>
         <li>
           <strong>Advertising (AdMob):</strong> in the free version we show ads
@@ -221,29 +271,77 @@
         </li>
       </ul>
       <p>
-        Verbattle does <strong>not</strong> request your name, email address, precise
-        location, contacts, or access to the camera or microphone.
+        Verbattle does <strong>not</strong> require you to create an account, and does
+        not ask for your email address, phone number, precise location, contacts, or
+        access to the camera or microphone.
       </p>
 
-      <h2>2. How we use data</h2>
+      <h2>2. Cloud data and tournaments</h2>
+      <p>
+        Some features, such as tournaments and the global leaderboard, require sending
+        a minimal amount of data to the cloud. We want to be fully transparent about
+        what is sent and why:
+      </p>
+      <ul>
+        <li>
+          <strong>Anonymous authentication:</strong> the app uses Firebase (Google)
+          anonymous sign-in. You do not need to register or provide an email address; an
+          anonymous identifier is simply generated for your device.
+        </li>
+        <li>
+          <strong>Tournament data:</strong> when you take part in a tournament, we send
+          to Firebase Firestore the display name you choose, the number of attempts, the
+          time and the result of your game. This data is required to compute and show
+          the global leaderboard.
+        </li>
+        <li>
+          <strong>No personally identifiable data:</strong> we do not collect data that
+          personally identifies you, such as email, phone number, location or contacts.
+          The tournament name is an alias you choose and does not have to be your real
+          name.
+        </li>
+        <li>
+          <strong>Advertising identifier:</strong> we use your device's advertising
+          identifier to show ads through Google AdMob (see the advertising section
+          below).
+        </li>
+        <li>
+          <strong>Encrypted in transit:</strong> all data sent to the cloud travels
+          encrypted (HTTPS/TLS).
+        </li>
+        <li>
+          <strong>Delete your data:</strong> you can erase all of your cloud data at any
+          time using the <strong>"Delete my data"</strong> option in the app's Settings.
+        </li>
+      </ul>
+
+      <h2>3. How we use data</h2>
       <ul>
         <li>To save your progress and preferences on the device.</li>
+        <li>To run tournaments and show the global leaderboard (via Firebase).</li>
         <li>To show ads in the free version (via AdMob).</li>
         <li>To manage the Verbattle Pro subscription (via Google Play).</li>
       </ul>
 
-      <h2>3. We do not sell your data</h2>
+      <h2>4. We do not sell your data</h2>
       <div class="card">
         <p style="margin:0">
           <strong>We do not sell or rent your personal data to third parties.</strong>
-          The only data that leaves the device is what Google AdMob (advertising) and
-          Google Play (purchases) process, according to their own policies.
+          The only data that leaves the device is what tournaments (via Firebase),
+          advertising (Google AdMob) and purchases (Google Play) require, according to
+          their own policies.
         </p>
       </div>
 
-      <h2>4. Third parties</h2>
+      <h2>5. Third parties</h2>
       <p>The app uses the following Google services:</p>
       <ul>
+        <li>
+          <strong>Firebase (Authentication and Firestore)</strong> — for anonymous
+          authentication and tournaments.
+          <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">
+            Firebase Privacy</a>.
+        </li>
         <li>
           <strong>Google AdMob</strong> —
           <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
@@ -254,36 +352,38 @@
         </li>
       </ul>
 
-      <h2>5. Personalized ads</h2>
+      <h2>6. Personalized ads</h2>
       <p>
         You can reset or limit your advertising identifier from your Android device
         settings (<code>Settings → Google → Ads</code>). Buying Verbattle Pro removes
         all ads.
       </p>
 
-      <h2>6. Children</h2>
+      <h2>7. Children</h2>
       <p>
         Verbattle is not directed at children under 13, and we do not knowingly
         collect personal data from children.
       </p>
 
-      <h2>7. Your rights</h2>
+      <h2>8. Your rights</h2>
       <p>
-        Since the game data is stored locally, you can delete it at any time by
-        uninstalling the app or clearing its data from system settings.
+        The game data is stored locally, so you can delete it at any time by
+        uninstalling the app or clearing its data from system settings. In addition, you
+        can erase all data associated with cloud tournaments using the
+        <strong>"Delete my data"</strong> option inside the app's Settings.
       </p>
 
-      <h2>8. Changes to this policy</h2>
+      <h2>9. Changes to this policy</h2>
       <p>
         We may update this policy from time to time. The "last updated" date at the
         top will reflect any changes.
       </p>
 
-      <h2>9. Contact</h2>
+      <h2>10. Contact</h2>
       <p>
         If you have questions about this privacy policy, write to us at:
         <br />
-        <a href="mailto:seedlabsgames@gmail.com">seedlabsgames@gmail.com</a>
+        <a href="mailto:contacto@lubicalabs.com">contacto@lubicalabs.com</a>
       </p>
 
       <footer>
@@ -294,7 +394,7 @@
     <!-- ============================ FRANÇAIS ============================ -->
     <section class="doc" data-lang="fr" hidden>
       <h1>Politique de confidentialité de Verbattle</h1>
-      <p class="updated">Dernière mise à jour : 8 juin 2026</p>
+      <p class="updated">Dernière mise à jour : 9 juin 2026</p>
 
       <p>
         Verbattle (« l'application », « nous ») est un jeu de mots développé par
@@ -310,7 +410,7 @@
           <strong>Données stockées sur votre appareil :</strong> votre historique de
           parties, votre série, la langue, le thème choisi et vos préférences (mode
           difficile, son). Ces informations sont enregistrées <em>localement</em> sur
-          votre appareil et ne sont pas envoyées à nos serveurs.
+          votre appareil.
         </li>
         <li>
           <strong>Publicité (AdMob) :</strong> dans la version gratuite, nous affichons
@@ -326,30 +426,79 @@
         </li>
       </ul>
       <p>
-        Verbattle ne demande <strong>pas</strong> votre nom, votre adresse e-mail, votre
-        position précise, vos contacts, ni l'accès à la caméra ou au microphone.
+        Verbattle ne vous demande <strong>pas</strong> de créer un compte et ne demande
+        pas votre adresse e-mail, votre numéro de téléphone, votre position précise, vos
+        contacts, ni l'accès à la caméra ou au microphone.
       </p>
 
-      <h2>2. Comment nous utilisons les données</h2>
+      <h2>2. Données dans le cloud et tournois</h2>
+      <p>
+        Certaines fonctionnalités, comme les tournois et le classement mondial,
+        nécessitent l'envoi d'une quantité minimale de données vers le cloud. Nous
+        souhaitons être parfaitement clairs sur ce qui est envoyé et pourquoi :
+      </p>
+      <ul>
+        <li>
+          <strong>Authentification anonyme :</strong> l'application utilise la connexion
+          anonyme de Firebase (Google). Vous n'avez pas besoin de vous inscrire ni de
+          fournir une adresse e-mail ; un identifiant anonyme est simplement généré pour
+          votre appareil.
+        </li>
+        <li>
+          <strong>Données de tournoi :</strong> lorsque vous participez à un tournoi,
+          nous envoyons à Firebase Firestore le nom d'affichage que vous choisissez, le
+          nombre de tentatives, le temps et le résultat de votre partie. Ces données sont
+          nécessaires pour calculer et afficher le classement mondial.
+        </li>
+        <li>
+          <strong>Aucune donnée personnelle identifiable :</strong> nous ne collectons
+          pas de données qui vous identifient personnellement, telles que l'e-mail, le
+          numéro de téléphone, la localisation ou les contacts. Le nom de tournoi est un
+          pseudonyme que vous choisissez et n'a pas à être votre vrai nom.
+        </li>
+        <li>
+          <strong>Identifiant publicitaire :</strong> nous utilisons l'identifiant
+          publicitaire de votre appareil pour afficher des publicités via Google AdMob
+          (voir la section sur la publicité ci-dessous).
+        </li>
+        <li>
+          <strong>Chiffrement en transit :</strong> toutes les données envoyées vers le
+          cloud sont chiffrées (HTTPS/TLS).
+        </li>
+        <li>
+          <strong>Supprimer vos données :</strong> vous pouvez effacer toutes vos données
+          du cloud à tout moment grâce à l'option <strong>« Supprimer mes données »</strong>
+          dans les Paramètres de l'application.
+        </li>
+      </ul>
+
+      <h2>3. Comment nous utilisons les données</h2>
       <ul>
         <li>Pour enregistrer votre progression et vos préférences sur l'appareil.</li>
+        <li>Pour gérer les tournois et afficher le classement mondial (via Firebase).</li>
         <li>Pour afficher des publicités dans la version gratuite (via AdMob).</li>
         <li>Pour gérer l'abonnement Verbattle Pro (via Google Play).</li>
       </ul>
 
-      <h2>3. Nous ne vendons pas vos données</h2>
+      <h2>4. Nous ne vendons pas vos données</h2>
       <div class="card">
         <p style="margin:0">
           <strong>Nous ne vendons ni ne louons vos données personnelles à des tiers.</strong>
-          Les seules données qui quittent l'appareil sont celles traitées par Google
-          AdMob (publicité) et Google Play (achats), conformément à leurs propres
-          politiques.
+          Les seules données qui quittent l'appareil sont celles requises par les
+          tournois (via Firebase), la publicité (Google AdMob) et les achats
+          (Google Play), conformément à leurs propres politiques.
         </p>
       </div>
 
-      <h2>4. Tiers</h2>
+      <h2>5. Tiers</h2>
       <p>L'application utilise les services Google suivants :</p>
       <ul>
+        <li>
+          <strong>Firebase (Authentication et Firestore)</strong> — pour
+          l'authentification anonyme et les tournois.
+          <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">
+            Confidentialité de Firebase</a>.
+        </li>
         <li>
           <strong>Google AdMob</strong> —
           <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
@@ -360,37 +509,39 @@
         </li>
       </ul>
 
-      <h2>5. Publicités personnalisées</h2>
+      <h2>6. Publicités personnalisées</h2>
       <p>
         Vous pouvez réinitialiser ou limiter l'identifiant publicitaire dans les
         paramètres de votre appareil Android (<code>Paramètres → Google → Annonces</code>).
         L'achat de Verbattle Pro supprime toutes les publicités.
       </p>
 
-      <h2>6. Mineurs</h2>
+      <h2>7. Mineurs</h2>
       <p>
         Verbattle ne s'adresse pas aux enfants de moins de 13 ans et nous ne collectons
         pas sciemment de données personnelles de mineurs.
       </p>
 
-      <h2>7. Vos droits</h2>
+      <h2>8. Vos droits</h2>
       <p>
-        Comme les données du jeu sont enregistrées localement, vous pouvez les supprimer
+        Les données du jeu sont enregistrées localement, vous pouvez donc les supprimer
         à tout moment en désinstallant l'application ou en effaçant ses données depuis
-        les paramètres du système.
+        les paramètres du système. De plus, vous pouvez effacer toutes les données
+        associées aux tournois dans le cloud grâce à l'option
+        <strong>« Supprimer mes données »</strong> dans les Paramètres de l'application.
       </p>
 
-      <h2>8. Modifications de cette politique</h2>
+      <h2>9. Modifications de cette politique</h2>
       <p>
         Nous pouvons mettre à jour cette politique de temps à autre. La date de
         « dernière mise à jour » en haut reflétera tout changement.
       </p>
 
-      <h2>9. Contact</h2>
+      <h2>10. Contact</h2>
       <p>
         Si vous avez des questions sur cette politique de confidentialité, écrivez-nous à :
         <br />
-        <a href="mailto:seedlabsgames@gmail.com">seedlabsgames@gmail.com</a>
+        <a href="mailto:contacto@lubicalabs.com">contacto@lubicalabs.com</a>
       </p>
 
       <footer>
@@ -401,7 +552,7 @@
     <!-- ============================ PORTUGUÊS ============================ -->
     <section class="doc" data-lang="pt" hidden>
       <h1>Política de Privacidade do Verbattle</h1>
-      <p class="updated">Última atualização: 8 de junho de 2026</p>
+      <p class="updated">Última atualização: 9 de junho de 2026</p>
 
       <p>
         O Verbattle ("o aplicativo", "nós") é um jogo de palavras desenvolvido pela
@@ -415,8 +566,7 @@
         <li>
           <strong>Dados armazenados no seu dispositivo:</strong> seu histórico de
           partidas, sequência, idioma, tema selecionado e preferências (modo difícil,
-          som). Essas informações são salvas <em>localmente</em> no seu dispositivo e
-          não são enviadas aos nossos servidores.
+          som). Essas informações são salvas <em>localmente</em> no seu dispositivo.
         </li>
         <li>
           <strong>Publicidade (AdMob):</strong> na versão gratuita, exibimos anúncios
@@ -432,29 +582,78 @@
         </li>
       </ul>
       <p>
-        O Verbattle <strong>não</strong> solicita seu nome, e-mail, localização precisa,
-        contatos nem acesso à câmera ou ao microfone.
+        O Verbattle <strong>não</strong> exige que você crie uma conta e não solicita seu
+        e-mail, número de telefone, localização precisa, contatos nem acesso à câmera ou
+        ao microfone.
       </p>
 
-      <h2>2. Como usamos os dados</h2>
+      <h2>2. Dados na nuvem e torneios</h2>
+      <p>
+        Alguns recursos, como os torneios e a tabela de classificação global, exigem o
+        envio de uma quantidade mínima de dados para a nuvem. Queremos ser totalmente
+        claros sobre o que é enviado e para quê:
+      </p>
+      <ul>
+        <li>
+          <strong>Autenticação anônima:</strong> o aplicativo usa o login anônimo do
+          Firebase (Google). Você não precisa se registrar nem fornecer um e-mail;
+          simplesmente é gerado um identificador anônimo para o seu dispositivo.
+        </li>
+        <li>
+          <strong>Dados de torneios:</strong> quando você participa de um torneio,
+          enviamos ao Firebase Firestore o nome de exibição que você escolher, o número
+          de tentativas, o tempo e o resultado da sua partida. Esses dados são
+          necessários para calcular e mostrar a tabela de classificação global.
+        </li>
+        <li>
+          <strong>Sem dados pessoais identificáveis:</strong> não coletamos dados que
+          identifiquem você pessoalmente, como e-mail, número de telefone, localização ou
+          contatos. O nome do torneio é um apelido que você escolhe e não precisa ser seu
+          nome real.
+        </li>
+        <li>
+          <strong>Identificador de publicidade:</strong> usamos o identificador de
+          publicidade do seu dispositivo para exibir anúncios por meio do Google AdMob
+          (consulte a seção de publicidade abaixo).
+        </li>
+        <li>
+          <strong>Criptografia em trânsito:</strong> todos os dados enviados para a nuvem
+          trafegam criptografados (HTTPS/TLS).
+        </li>
+        <li>
+          <strong>Excluir seus dados:</strong> você pode apagar todos os seus dados da
+          nuvem a qualquer momento usando a opção <strong>"Excluir meus dados"</strong>
+          nas Configurações do aplicativo.
+        </li>
+      </ul>
+
+      <h2>3. Como usamos os dados</h2>
       <ul>
         <li>Para salvar seu progresso e preferências no dispositivo.</li>
+        <li>Para gerenciar os torneios e mostrar a tabela de classificação global (via Firebase).</li>
         <li>Para exibir anúncios na versão gratuita (via AdMob).</li>
         <li>Para gerenciar a assinatura Verbattle Pro (via Google Play).</li>
       </ul>
 
-      <h2>3. Não vendemos seus dados</h2>
+      <h2>4. Não vendemos seus dados</h2>
       <div class="card">
         <p style="margin:0">
           <strong>Não vendemos nem alugamos seus dados pessoais a terceiros.</strong>
-          Os únicos dados que saem do dispositivo são os processados pelo Google AdMob
-          (publicidade) e Google Play (compras), conforme suas próprias políticas.
+          Os únicos dados que saem do dispositivo são os exigidos pelos torneios
+          (via Firebase), pela publicidade (Google AdMob) e pelas compras
+          (Google Play), conforme suas próprias políticas.
         </p>
       </div>
 
-      <h2>4. Terceiros</h2>
+      <h2>5. Terceiros</h2>
       <p>O aplicativo utiliza os seguintes serviços do Google:</p>
       <ul>
+        <li>
+          <strong>Firebase (Authentication e Firestore)</strong> — para a autenticação
+          anônima e os torneios.
+          <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">
+            Privacidade do Firebase</a>.
+        </li>
         <li>
           <strong>Google AdMob</strong> —
           <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
@@ -466,37 +665,39 @@
         </li>
       </ul>
 
-      <h2>5. Anúncios personalizados</h2>
+      <h2>6. Anúncios personalizados</h2>
       <p>
         Você pode redefinir ou limitar o identificador de publicidade nas configurações
         do seu dispositivo Android (<code>Configurações → Google → Anúncios</code>). Ao
         adquirir o Verbattle Pro, todos os anúncios são removidos.
       </p>
 
-      <h2>6. Menores de idade</h2>
+      <h2>7. Menores de idade</h2>
       <p>
         O Verbattle não é direcionado a menores de 13 anos e não coletamos
         conscientemente dados pessoais de menores.
       </p>
 
-      <h2>7. Seus direitos</h2>
+      <h2>8. Seus direitos</h2>
       <p>
-        Como os dados do jogo são salvos localmente, você pode excluí-los a qualquer
+        Os dados do jogo são salvos localmente, então você pode excluí-los a qualquer
         momento desinstalando o aplicativo ou apagando seus dados nas configurações do
-        sistema.
+        sistema. Além disso, você pode apagar todos os dados associados aos torneios na
+        nuvem usando a opção <strong>"Excluir meus dados"</strong> dentro das
+        Configurações do aplicativo.
       </p>
 
-      <h2>8. Alterações nesta política</h2>
+      <h2>9. Alterações nesta política</h2>
       <p>
         Podemos atualizar esta política ocasionalmente. A data de "última atualização"
         no topo refletirá qualquer alteração.
       </p>
 
-      <h2>9. Contato</h2>
+      <h2>10. Contato</h2>
       <p>
         Se você tiver dúvidas sobre esta política de privacidade, escreva para:
         <br />
-        <a href="mailto:seedlabsgames@gmail.com">seedlabsgames@gmail.com</a>
+        <a href="mailto:contacto@lubicalabs.com">contacto@lubicalabs.com</a>
       </p>
 
       <footer>
